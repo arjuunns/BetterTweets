@@ -83,8 +83,8 @@ const TextEnhancer = () => {
   return (
     <div className="w-full p-6 bg-transparent rounded-lg flex justify-center gap-10 flex-wrap">
       <Toaster />
-      <div className="w-full border max-w-md border-gray-200 rounded-lg p-4 bg-white flex flex-col gap-2">
-        <h2 className="text-lg font-semibold text-gray-900 mb-4 translate-y-2">
+      <div className="w-full border max-w-md border-gray-200 rounded-lg p-4 bg-white flex flex-col gap-2 dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+        <h2 className="text-lg font-semibold text-gray-900 mb-4 translate-y-2 dark:text-white">
           Original Text
         </h2>
         <textarea
@@ -92,19 +92,19 @@ const TextEnhancer = () => {
           placeholder="Paste/Write your text here..."
           value={text}
           onChange={(e) => setText(e.target.value)}
-          className="w-full h-32 translate-y- p-3 border border-gray-200 rounded-lg text-gray-600 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent resize-none"
+          className="w-full h-32 translate-y- p-3 border border-gray-200 rounded-lg text-gray-600 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent resize-none dark:bg-gray-700 dark:border-gray-500 dark:text-white"
         />
 
         <div className="flex flex-col gap-8">
           <div className="flex justify-between gap-4 translate-y-2 flex-col sm:flex-row">
             <div className="w-full">
-              <label className="block text-sm font-medium text-gray-700 mb-1cw-full">
+              <label className="block text-sm font-medium text-gray-700 mb-1cw-full dark:text-white">
                 Tone
               </label>
               <select
                 value={tone}
                 onChange={(e) => setTone(e.target.value)}
-                className="hover:bg-gray-50 w-full p-2 border border-gray-200 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent"
+                className="hover:bg-gray-50 w-full p-2 border border-gray-200 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-500 dark:text-white dark:hover:bg-gray-800"
               >
                 {toneOptions.map((tone) => (
                   <option key={tone} value={tone}>
@@ -115,13 +115,13 @@ const TextEnhancer = () => {
             </div>
 
             <div className="w-full">
-              <label className="block text-sm font-medium text-gray-700">
+              <label className="block text-sm font-medium text-gray-700 dark:text-white">
                 Style
               </label>
               <select
                 value={style}
                 onChange={(e) => setstyle(e.target.value)}
-                className="hover:bg-gray-50 w-full p-2 border border-gray-200 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent"
+                className="hover:bg-gray-50 w-full p-2 border border-gray-200 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-500 dark:text-white dark:hover:bg-gray-800 "
               >
                 {styleOptions.map((style) => (
                   <option key={style} value={style}>
@@ -190,9 +190,9 @@ const TextEnhancer = () => {
           </button>
         </div>
       </div>
-      <div className="w-full max-w-md p-6 space-y-6 bg-white rounded-lg border-[1px]">
+      <div className="w-full max-w-md p-6 space-y-6 bg-white rounded-lg border-[1px] dark:bg-gray-800 dark:border-gray-700 dark:text-white">
         <div>
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">
+          <h2 className="text-lg font-semibold text-gray-900 mb-4 dark:text-white">
             Transformed Text
           </h2>
           <textarea
@@ -201,7 +201,7 @@ const TextEnhancer = () => {
             ref={outputTextRef}
             readOnly
             onChange={(e) => setOutputText(e.target.value)}
-            className="w-full h-64 p-3 border border-gray-200 rounded-lg text-gray-600 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent resize-none"
+            className="w-full h-64 p-3 border border-gray-200 rounded-lg text-gray-600 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent resize-none dark:bg-gray-700 dark:border-gray-500 dark:text-white"
           />
         </div>
         <button
