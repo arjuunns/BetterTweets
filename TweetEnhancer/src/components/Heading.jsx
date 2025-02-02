@@ -1,6 +1,6 @@
 const AITextBanner = () => {
   return (
-    <div className="w-full py-24 px-4 flex flex-col items-center justify-center text-center">
+    <div className="w-full md:py-24 py-4 px-4 flex flex-col items-center justify-center text-center">
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 dark:text-white">
         Transform Your Tweets with{" "}
         <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
