@@ -4,9 +4,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 async function generateAIContent(setOutputText, text, tone, voice, Words) {
-  const genAI = new GoogleGenerativeAI(
-    "AIzaSyBqoAWDpiYwpnhPbykB8mn7oARssYRg5BM"
-  );
+  const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_KEY);
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
   const prompt = `Modify "${text}" into a text with exactly ${Words} words the following parameters => Tone: ${tone}, Voice: ${voice}`;
@@ -116,13 +114,7 @@ const TextEnhancer = () => {
             onClick={() =>
               toast.promise(
                 () =>
-                  generateAIContent(
-                    setOutputText,
-                    text,
-                    tone,
-                    voice,
-                    Words
-                  ),
+                  generateAIContent(setOutputText, text, tone, voice, Words),
                 {
                   loading: "Enhancing Text...",
                   success: "Text Enhanced Successfully",
