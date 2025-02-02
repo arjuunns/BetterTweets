@@ -4,7 +4,7 @@ import Heading from "./components/Heading";
 import { useEffect, useState } from "react";
 import { Moon, Sun } from 'lucide-react';
 const background =
-  "absolute inset-0 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] dark:bg-gray-900 dark:bg-[radial-gradient(#3b3b3b_1px,transparent_1px)]";
+  " inset-0 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] dark:bg-gray-900 dark:bg-[radial-gradient(#3b3b3b_1px,transparent_1px)] bg-repeat";
 function App() {
   const [isDark, setIsDark] = useState(false);
   
@@ -29,7 +29,7 @@ function App() {
     <div className={background}>
        <button
         onClick={toggleDarkMode}
-        className="fixed top-4 right-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+        className="z-100 fixed top-4 right-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
         aria-label="Toggle dark mode"
       >
         {isDark ? (
