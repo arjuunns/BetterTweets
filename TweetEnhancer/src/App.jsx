@@ -41,7 +41,7 @@ function App() {
       <Heading />
       <Original />
       <div></div>
-      <p className="text-center mt-12 text-slate-700 font-mono dark:text-white">
+      <p className="text-center mt-12 text-slate-700 font-mono dark:text-white pb-12">
         Made with 💙 by{" "}
         <a
           className="text-blue-600 font-bold underline"
