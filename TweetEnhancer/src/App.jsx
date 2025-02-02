@@ -1,11 +1,13 @@
 import "./App.css";
 import Original from "./components/Original";
 import Heading from "./components/Heading";
+import { Analytics } from "@vercel/analytics/react"
 const background =
   "absolute inset-0 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]";
 function App() {
   return (
     <div className={background}>
+      <Analytics/>
       <Heading />
       <Original />
       <div></div>
