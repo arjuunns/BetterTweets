@@ -27,9 +27,10 @@ function App() {
   };
   return (
     <div className={background}>
+      <div className="flex justify-end p-4 ">
        <button
         onClick={toggleDarkMode}
-        className="z-100 fixed top-4 right-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+        className="sticky p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
         aria-label="Toggle dark mode"
       >
         {isDark ? (
@@ -38,6 +39,7 @@ function App() {
           <Moon className="w-6 h-6 text-gray-700" />
         )}
       </button>
+      </div>
       <Heading />
       <Original />
       <div></div>
