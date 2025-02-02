@@ -34,7 +34,7 @@ const TextEnhancer = () => {
   const [text, setText] = useState("");
   const [tone, setTone] = useState("professional");
   const [voice, setVoice] = useState("active");
-  const [Words, setWords] = useState(30);
+  const [Words, setWords] = useState(10);
   const [outputText, setOutputText] = useState("");
   const originalTextRef = useRef();
   const outputTextRef = useRef();
