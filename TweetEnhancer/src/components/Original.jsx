@@ -13,7 +13,7 @@ async function generateAIContent(
   emojis
 ) {
   const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_KEY);
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
   const prompt = `Rewrite the following text to be exactly ${Words} words long.  
 - Maintain coherence and readability.  
